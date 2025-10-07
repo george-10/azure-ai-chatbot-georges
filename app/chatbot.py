@@ -24,12 +24,12 @@ def get_completion_from_messages(messages, model=deployment, temperature=0):
     messages.append({"role": "assistant", "content": response.choices[0].message.content})
     return response.choices[0].message.content
 
-context = [{"role": "system", "content": "You are a helpful assistant."}]
+# context = [{"role": "system", "content": "You are a helpful assistant."}]
 
-while True:
-    response = get_completion_from_messages(context)
-    print("AI:", response)
-    user_input = input("User: ")
-    if user_input.lower() in ["exit", "quit"]:
-        break
-    context.append({"role": "user", "content": user_input})
+# while True:
+#     response = get_completion_from_messages(context)
+#     print("AI:", response)
+#     user_input = input("User: ")
+#     if user_input.lower() in ["exit", "quit"]:
+#         break
+#     context.append({"role": "user", "content": user_input})
